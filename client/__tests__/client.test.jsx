@@ -1,6 +1,6 @@
 import * as React from "react";
 import {createRoot } from "react-dom/client";
-import {FrontPage} from "../frontPage";
+import {FrontPage} from "../site/frontPage";
 import {act} from "react-dom/test-utils";
 import {BrowserRouter, HashRouter, MemoryRouter} from "react-router-dom";
 

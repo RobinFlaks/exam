@@ -2,6 +2,10 @@
 
 how to run the the code:
 
+github (for some reason it didnt find the classroom repo when creating project from version control) :
+https://github.com/RobinFlaks/exam
+
+
 # Technologies: 
 
 - [ ] some form of Login and access control
@@ -12,16 +16,16 @@ how to run the the code:
 - [ ] Github Actions with coverage report
 - [ ] Deployment to Azure
 - [ ] Mongodb
-- [ ] Navigating in the application using React Router
+- [x] Navigating in the application using React Router
 - [ ] Writing data to server
 - [ ] Websockets
 
 # General Requirements:
 - E
-  - [ ] Write a homepage in React
-  - [ ] Have at least 2 other React pages that can be accessed via React-Router
+  - [x] Write a homepage in React
+  - [x] Have at least 2 other React pages that can be accessed via React-Router
   - [ ] At least one page has "state", with a change that is triggered from interface
-  - [ ] From each page you can navigate back (either previous page or homepage)
+  - [x] From each page you can navigate back (either previous page or homepage)
 - D
   - [ ] Create a RESTful API that handles at least one GET, POST, PUT and DELETE (with JSON)
   - [ ] Frontend is using the api(ex using fetch)
