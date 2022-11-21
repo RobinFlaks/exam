@@ -1,8 +1,7 @@
 import * as React from "react";
 import {createRoot } from "react-dom/client";
-import {FrontPage} from "../site/frontPage";
 import {act} from "react-dom/test-utils";
-import {BrowserRouter, HashRouter, MemoryRouter} from "react-router-dom";
+import {Login} from "../header/login";
 
 describe("client test suite", () =>{
 
@@ -12,10 +11,10 @@ describe("client test suite", () =>{
         const root = createRoot(element);
 
         act (() => {
-            root.render(<HashRouter><FrontPage/></HashRouter>)
+            root.render(<Login/>)
         });
 
-        expect(element.querySelector("h2")?.innerHTML).toEqual("hello!")
+        expect(element.querySelector("h3")?.innerHTML).toEqual("this is the Login page :D")
         expect(element.innerHTML).toMatchSnapshot();
     });
 });

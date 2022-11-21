@@ -5,6 +5,8 @@ how to run the the code:
 github (for some reason it didnt find the classroom repo when creating project from version control) :
 https://github.com/RobinFlaks/exam
 
+additional info:
+- using HashRouter since that allows the user to refresh and still be on the same page.
 
 # Technologies: 
 

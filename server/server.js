@@ -3,15 +3,26 @@ import * as path from "path";
 
 const app = express()
 
+app.use(express.static("../client/dist"));
 
-
-app.get("/api/login", (req, res) =>{
-   res.json({
-       username: "admin",
-       password: "secret"
-   })
+app.use((req, res, next) => {
+   if(req.method === "GET" && !req.path.startsWith("/api/")){
+       return res.sendFile(path.resolve("../client/dist/index.html"));
+   } else {
+       next();
+   }
 });
 
-app.use(express.static("../client/dist"))
+app.get("/api/login", (req, res) =>{
+   function respond(){
+       res.json({
+           username: "admin",
+           password: "secret",
+       });
+   }
+   setTimeout(respond, 3000)
+});
+
+
 
 const server = app.listen(process.env.PORT || 3000, () => {console.log(`started server on http://localhost:${server.address().port}`);});
