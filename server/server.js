@@ -3,13 +3,7 @@ import * as path from "path";
 
 const app = express()
 
-app.use((req, res, next) =>{
-    if(req.method === "GET" && !req.path.startsWith("/api")){
-        return res.sendFile(path.resolve("../client/dist/" + req.path));
-    } else {
-        next()
-    }
-});
+
 
 app.get("/api/login", (req, res) =>{
    res.json({

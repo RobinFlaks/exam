@@ -1,20 +1,25 @@
 import * as React from "react";
 import {createRoot} from "react-dom/client";
-import {BrowserRouter, Link, Route, Routes} from "react-router-dom";
+import {HashRouter, Route, Routes} from "react-router-dom";
 import {FrontPage} from "./frontPage";
+import {Login} from "./login";
 
 const element = document.getElementById("app");
 
 const root = createRoot(element);
 
+
 function Application(){
     return (
-        <BrowserRouter>
+        <HashRouter>
             <Routes>
                 <Route path="/" element={<FrontPage/>}/>
+                <Route path="/login" element={<Login/>}/>
             </Routes>
-        </BrowserRouter>
+        </HashRouter>
     )
 }
 
-root.render(<Application/>);
+root.render(
+        <Application/>
+);

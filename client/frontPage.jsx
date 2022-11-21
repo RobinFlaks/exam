@@ -6,7 +6,7 @@ export function FrontPage() {
     return <div>
         <h2>hello!</h2>
         <div>
-            <Link to={"/login"}>login?</Link>
+            <Link to={{pathname: "login"}}>login?</Link>
         </div>
     </div>
 }
