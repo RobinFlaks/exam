@@ -1,6 +1,5 @@
-
-describe("server test suite", ()=>{
-    it("server does something", ()=>{
-        //test code here
-    });
+describe("server test suite", () => {
+  it("server does something", () => {
+    //test code here
+  });
 });

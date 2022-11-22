@@ -8,6 +8,9 @@ https://github.com/RobinFlaks/exam
 additional info:
 - using HashRouter since that allows the user to refresh and still be on the same page.
 
+known issues:
+- when leaving a page with a get call the browser gets an error message n is not a function, when refreshing the page it renders without issues.
+
 # Technologies: 
 
 - [ ] some form of Login and access control
@@ -26,7 +29,7 @@ additional info:
 - E
   - [x] Write a homepage in React
   - [x] Have at least 2 other React pages that can be accessed via React-Router
-  - [ ] At least one page has "state", with a change that is triggered from interface
+  - [x] At least one page has "state", with a change that is triggered from interface
   - [x] From each page you can navigate back (either previous page or homepage)
 - D
   - [ ] Create a RESTful API that handles at least one GET, POST, PUT and DELETE (with JSON)
@@ -51,7 +54,7 @@ additional info:
 
 # Specific requirements
 - E
-  - [ ] A visitor to the page is able to see the menu of potential dishes
+  - [x] A visitor to the page is able to see the menu of potential dishes
   - [ ] When the application starts in developer mode have some data already filled in
 - D
   - [ ] A customer should be able to create an account but admin users are not able to be created
