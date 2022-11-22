@@ -1,12 +1,16 @@
 
 
 how to run the the code:
+- in project root:
+  - npm run install:app (this is only used the first time)
+  - npm run build
+  - npm run dev
 
 github (for some reason it didnt find the classroom repo when creating project from version control) :
 https://github.com/RobinFlaks/exam
 
 additional info:
-- using HashRouter since that allows the user to refresh and still be on the same page.
+- to allow for anyone to acces the db I have uploaded the .env file to git(this would normally be a file with personal access to the db for each developer)
 
 known issues:
 - when leaving a page with a get call the browser gets an error message n is not a function, when refreshing the page it renders without issues.
@@ -18,7 +22,7 @@ known issues:
   - [ ] Snapshot tests
   - [ ] simulate + jest.fn
   - [ ] supertest
-- [ ] Github Actions with coverage report
+- [ ] GitHub Actions with coverage report
 - [ ] Deployment to Azure
 - [x] Mongodb
 - [x] Navigating in the application using React Router
@@ -37,7 +41,7 @@ known issues:
   - [ ] All endpoints must be listed in README.md
   - [x] The solution uses continuous integration (GitHub) the CI should run tests
 - C
-  - [ ] Handle authentication/authhorization (via cookies)
+  - [ ] Handle authentication/authorization (via cookies)
   - [x] Frontend should have a login page
   - [ ] A logged-in user gets a personalized welcome message
   - [ ] On every page there is an option to logout
@@ -61,7 +65,7 @@ known issues:
 - C
   - [ ] An admin is able to log in, add and remove items from the menu, edit existing menu items (update ingredients for a menu item)
 - B
-  - [ ] The server should have sperate API paths for customers getting data and admins adding/removing items (checks to ensure that only admins can add/removve items should be enforced)
+  - [ ] The server should have separate API paths for customers getting data and admins adding/removing items (checks to ensure that only admins can add/remove items should be enforced)
 - A
   - [ ] a Chat system (based on WebSockets) should be provided where a cusomer can chat with an employee
   - [ ] A customer can create an order specifying a time/place where they want a delivery, and how many portions of each dish they select.
@@ -69,4 +73,4 @@ known issues:
 
 # Submission
 - [ ] PDF file of the README.md
-- [ ] .zip from github
+- [ ] .zip from GitHub
