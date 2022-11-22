@@ -38,7 +38,7 @@ known issues:
   - [ ] The solution uses continuous integration (GitHub) the CI should run tests
 - C
   - [ ] Handle authentication/authhorization (via cookies)
-  - [ ] Frontend should have a login page
+  - [x] Frontend should have a login page
   - [ ] A logged-in user gets a personalized welcome message
   - [ ] On every page there is an option to logout
 - B
@@ -57,7 +57,7 @@ known issues:
   - [x] A visitor to the page is able to see the menu of potential dishes
   - [x] When the application starts in developer mode have some data already filled in
 - D
-  - [ ] A customer should be able to create an account but admin users are not able to be created
+  - [x] A customer should be able to create an account but admin users are not able to be created
 - C
   - [ ] An admin is able to log in, add and remove items from the menu, edit existing menu items (update ingredients for a menu item)
 - B
