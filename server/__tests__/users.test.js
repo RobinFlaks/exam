@@ -1,9 +1,9 @@
 import bodyParser from "body-parser";
 import request from "supertest";
-import {MenuApi} from "../api/menu.js";
 import express from "express";
 import { MongoClient } from "mongodb"
 import dotenv from "dotenv"
+import {UserApi} from "../api/users.js";
 
 const app = express();
 app.use(bodyParser.json())
@@ -17,7 +17,7 @@ beforeAll(async () => {
   const database = mongoClient.db("unit_tests");
   await database.collection("users").deleteMany({});
 
-  app.use("/api/general/users", MenuApi(database))
+  app.use("/api/general/users", UserApi(database))
 });
 
 afterAll(() =>{
