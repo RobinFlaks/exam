@@ -13,7 +13,7 @@ additional info:
 - to allow for anyone to acces the db I have uploaded the .env file to git(this would normally be a file with personal access to the db for each developer)
 
 known issues:
-- when leaving a page with a get call the browser gets an error message n is not a function, when refreshing the page it renders without issues.
+- 
 
 # Technologies: 
 

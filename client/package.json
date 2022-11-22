@@ -5,7 +5,8 @@
   "scripts": {
     "build": "npm install --include=dev && parcel build index.html",
     "dev": "parcel watch index.html",
-    "test": "jest"
+    "test": "jest",
+    "verify": "jest --collectCoverage"
   },
   "keywords": [],
   "author": "",
