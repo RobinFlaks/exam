@@ -1,17 +1,42 @@
 import express from "express";
 import * as path from "path";
-import { CateringApi, UserApi } from "./cateringApi.js";
 import bodyParser from "body-parser";
+import dotenv from "dotenv";
+import { MongoClient } from "mongodb";
+import { MenuApi } from "./api/menu.js";
+import { UserApi } from "./api/users.js";
+
+dotenv.config();
 
 const app = express();
 
 app.use(bodyParser.json());
 
+const mongodbUrl = process.env.MONGODB_URL;
+
+if (mongodbUrl) {
+  const client = new MongoClient(mongodbUrl);
+
+  client
+    .connect()
+    .then((conn) =>
+      app.use(
+        "/api/general/users",
+        UserApi(conn.db(process.env.MONGODB_DATABASE || "Catering"))
+      )
+    );
+
+  client
+    .connect()
+    .then((conn) =>
+      app.use(
+        "/api/general/menu",
+        MenuApi(conn.db(process.env.MONGODB_DATABASE || "Catering"))
+      )
+    );
+}
+
 app.use(express.static("../client/dist"));
-
-app.use("/api/general/users", UserApi);
-
-app.use("/api/general/menu", CateringApi);
 
 app.use((req, res, next) => {
   if (req.method === "GET" && !req.path.startsWith("/api/")) {

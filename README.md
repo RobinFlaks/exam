@@ -20,7 +20,7 @@ known issues:
   - [ ] supertest
 - [ ] Github Actions with coverage report
 - [ ] Deployment to Azure
-- [ ] Mongodb
+- [x] Mongodb
 - [x] Navigating in the application using React Router
 - [ ] Writing data to server
 - [ ] Websockets
@@ -33,7 +33,7 @@ known issues:
   - [x] From each page you can navigate back (either previous page or homepage)
 - D
   - [ ] Create a RESTful API that handles at least one GET, POST, PUT and DELETE (with JSON)
-  - [ ] Frontend is using the api(ex using fetch)
+  - [x] Frontend is using the api(ex using fetch)
   - [ ] All endpoints must be listed in README.md
   - [ ] The solution uses continuous integration (GitHub) the CI should run tests
 - C
@@ -55,7 +55,7 @@ known issues:
 # Specific requirements
 - E
   - [x] A visitor to the page is able to see the menu of potential dishes
-  - [ ] When the application starts in developer mode have some data already filled in
+  - [x] When the application starts in developer mode have some data already filled in
 - D
   - [ ] A customer should be able to create an account but admin users are not able to be created
 - C
