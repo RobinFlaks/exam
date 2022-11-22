@@ -1,16 +1,16 @@
 
 
-how to run the the code:
+how to run the code:
 - in project root:
   - npm run install:app (this is only used the first time)
   - npm run build
   - npm run dev
 
-github (for some reason it didnt find the classroom repo when creating project from version control) :
+GitHub (for some reason it didn't find the classroom repo when creating project from version control) :
 https://github.com/RobinFlaks/exam
 
 additional info:
-- to allow for anyone to acces the db I have uploaded the .env file to git(this would normally be a file with personal access to the db for each developer)
+- to allow for anyone to access the db I have uploaded the .env file to git(this would normally be a file with personal access to the db for each developer)
 
 known issues:
 - 
@@ -18,15 +18,15 @@ known issues:
 # Technologies: 
 
 - [ ] some form of Login and access control
-- [ ] Jest tests
-  - [ ] Snapshot tests
+- [x] Jest tests
+  - [x] Snapshot tests
   - [ ] simulate + jest.fn
-  - [ ] supertest
-- [ ] GitHub Actions with coverage report
+  - [x] supertest
+- [x] GitHub Actions with coverage report
 - [ ] Deployment to Azure
 - [x] Mongodb
 - [x] Navigating in the application using React Router
-- [ ] Writing data to server
+- [x] Writing data to server
 - [ ] Websockets
 
 # General Requirements:
@@ -54,7 +54,7 @@ known issues:
   - [ ] Extra functionality:
 
 # Testing
-- Code coverage: 0% coverage report found under "npm run test" in github actions
+- Code coverage: 0% coverage report found under "npm run test" in GitHub actions
 
 # Specific requirements
 - E
@@ -67,7 +67,7 @@ known issues:
 - B
   - [ ] The server should have separate API paths for customers getting data and admins adding/removing items (checks to ensure that only admins can add/remove items should be enforced)
 - A
-  - [ ] a Chat system (based on WebSockets) should be provided where a cusomer can chat with an employee
+  - [ ] a Chat system (based on WebSockets) should be provided where a customer can chat with an employee
   - [ ] A customer can create an order specifying a time/place where they want a delivery, and how many portions of each dish they select.
   - extra:
 

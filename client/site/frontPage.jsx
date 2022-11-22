@@ -1,10 +1,10 @@
 import { Link } from "react-router-dom";
 import * as React from "react";
-import { fetchJSON, useLoader } from "../useLoader";
+import { useLoader } from "../useLoader";
 
-export function FrontPage() {
-  const { loading, error, data } = useLoader(
-    async () => await fetchJSON("/api/general/users")
+export function FrontPage({userApi}) {
+  const { loading, error, data } = useLoader( async() =>
+    userApi.returnUser()
   );
 
   const user = data;

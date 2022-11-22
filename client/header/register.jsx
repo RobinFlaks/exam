@@ -1,8 +1,7 @@
 import { useState } from "react";
-import { fetchJSON } from "../useLoader";
 import { useNavigate } from "react-router-dom";
 
-export function Register() {
+export function Register({userApi}) {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
@@ -10,10 +9,7 @@ export function Register() {
   async function handleSubmit(e) {
     e.preventDefault();
 
-    await fetchJSON("/api/general/users", {
-      method: "post",
-      json: { username, password },
-    });
+    userApi.registerUser({username, password});
 
     setUsername("");
     setPassword("");

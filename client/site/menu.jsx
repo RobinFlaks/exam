@@ -1,8 +1,8 @@
-import { fetchJSON, useLoader } from "../useLoader";
+import { useLoader } from "../useLoader";
 
-function ListDishes() {
-  const { loading, error, data } = useLoader(
-    async () => await fetchJSON("/api/general/menu")
+function ListDishes({menuApi}) {
+  const { loading, error, data } = useLoader(async () =>
+        menuApi.listMenu()
   );
 
   if (loading) {
@@ -30,11 +30,11 @@ function ListDishes() {
   );
 }
 
-export function Menu() {
+export function Menu({menuApi}) {
   return (
     <div>
       <h3>Our dishes:</h3>
-      <ListDishes />
+      <ListDishes menuApi={menuApi}/>
     </div>
   );
 }
