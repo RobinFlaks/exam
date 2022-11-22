@@ -1,5 +1,17 @@
-import { useState } from "react";
+import React, {useState} from "react";
 import { useNavigate } from "react-router-dom";
+
+
+function FormInput({value, label, onChangeValue}){
+  return(
+      <div>
+        <label>
+          {label}:{" "}
+          <input value={value} onChange={(e) => onChangeValue(e.target.value)}/>
+        </label>
+      </div>
+  )
+}
 
 export function Register({userApi}) {
   const [username, setUsername] = useState("");
@@ -21,26 +33,8 @@ export function Register({userApi}) {
     <div>
       <h3>register:</h3>
       <form onSubmit={handleSubmit}>
-        <div>
-          <label>
-            {" "}
-            username:{" "}
-            <input
-              value={username}
-              onChange={(e) => setUsername(e.target.value)}
-            />
-          </label>
-        </div>
-        <div>
-          <label>
-            {" "}
-            password:{" "}
-            <input
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-            />
-          </label>
-        </div>
+        <FormInput label={"username"} value={username} onChangeValue={setUsername}/>
+        <FormInput label={"password"} value={password} onChangeValue={setPassword}/>
         <button>Register</button>
       </form>
     </div>

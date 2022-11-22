@@ -20,7 +20,7 @@ known issues:
 - [ ] some form of Login and access control
 - [x] Jest tests
   - [x] Snapshot tests
-  - [ ] simulate + jest.fn
+  - [x] simulate + jest.fn
   - [x] supertest
 - [x] GitHub Actions with coverage report
 - [ ] Deployment to Azure
