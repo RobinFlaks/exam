@@ -35,7 +35,7 @@ known issues:
   - [ ] Create a RESTful API that handles at least one GET, POST, PUT and DELETE (with JSON)
   - [x] Frontend is using the api(ex using fetch)
   - [ ] All endpoints must be listed in README.md
-  - [ ] The solution uses continuous integration (GitHub) the CI should run tests
+  - [x] The solution uses continuous integration (GitHub) the CI should run tests
 - C
   - [ ] Handle authentication/authhorization (via cookies)
   - [x] Frontend should have a login page
