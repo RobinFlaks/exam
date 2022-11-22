@@ -50,7 +50,7 @@ known issues:
   - [ ] Extra functionality:
 
 # Testing
-- Code coverage: 0%
+- Code coverage: 0% coverage report found under "npm run test" in github actions
 
 # Specific requirements
 - E
