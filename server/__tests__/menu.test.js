@@ -1,14 +1,13 @@
 import bodyParser from "body-parser";
 import request from "supertest";
-import {MenuApi} from "../api/menu.js";
+import { MenuApi } from "../api/menu.js";
 import express from "express";
-import { MongoClient } from "mongodb"
-import dotenv from "dotenv"
+import { MongoClient } from "mongodb";
+import dotenv from "dotenv";
 
 const app = express();
-app.use(bodyParser.json())
+app.use(bodyParser.json());
 let mongoClient;
-
 
 beforeAll(async () => {
   dotenv.config();
@@ -17,21 +16,18 @@ beforeAll(async () => {
   const database = mongoClient.db("unit_tests");
   await database.collection("menu").deleteMany({});
 
-  app.use("/api/general/menu", MenuApi(database))
+  app.use("/api/general/menu", MenuApi(database));
 });
 
-afterAll(() =>{
+afterAll(() => {
   mongoClient.close();
-})
+});
 
 describe("server test suite", () => {
   it("server does something", async () => {
-
     const agent = request.agent(app);
     const response = await agent.get("/api/general/menu");
 
     expect(response.status).toEqual(200);
-
-
   });
 });

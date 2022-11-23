@@ -1,9 +1,7 @@
 import { useLoader } from "../useLoader";
 
-function ListDishes({menuApi}) {
-  const { loading, error, data } = useLoader(async () =>
-        menuApi.listMenu()
-  );
+function ListDishes({ menuApi }) {
+  const { loading, error, data } = useLoader(async () => menuApi.listMenu());
 
   if (loading) {
     return <div>loading...</div>;
@@ -30,11 +28,11 @@ function ListDishes({menuApi}) {
   );
 }
 
-export function Menu({menuApi}) {
+export function Menu({ menuApi }) {
   return (
     <div>
       <h3>Our dishes:</h3>
-      <ListDishes menuApi={menuApi}/>
+      <ListDishes menuApi={menuApi} />
     </div>
   );
 }

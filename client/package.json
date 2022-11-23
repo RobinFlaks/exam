@@ -42,6 +42,7 @@
     },
     "collectCoverageFrom": [
       "**/*.jsx",
+      "!index.jsx",
       "!dist/**",
       "!coverage/**",
       "!__tests__/**"

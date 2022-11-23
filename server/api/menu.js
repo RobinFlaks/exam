@@ -18,5 +18,7 @@ export function MenuApi(db) {
     res.json(menu);
   });
 
+  api.put("/");
+
   return api;
 }

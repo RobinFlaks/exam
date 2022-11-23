@@ -13,11 +13,18 @@ additional info:
 - to allow for anyone to access the db I have uploaded the .env file to git(this would normally be a file with personal access to the db for each developer)
 
 known issues:
-- 
+- have to refresh when loggin in and out
+
+endpoints:
+- api/
+  - menu (get)
+  - user(get & post)
+    - login(post)
+    - logout(post)
 
 # Technologies: 
 
-- [ ] some form of Login and access control
+- [x] some form of Login and access control
 - [x] Jest tests
   - [x] Snapshot tests
   - [x] simulate + jest.fn
@@ -38,13 +45,13 @@ known issues:
 - D
   - [ ] Create a RESTful API that handles at least one GET, POST, PUT and DELETE (with JSON)
   - [x] Frontend is using the api(ex using fetch)
-  - [ ] All endpoints must be listed in README.md
+  - [x] All endpoints must be listed in README.md
   - [x] The solution uses continuous integration (GitHub) the CI should run tests
 - C
-  - [ ] Handle authentication/authorization (via cookies)
+  - [x] Handle authentication/authorization (via cookies)
   - [x] Frontend should have a login page
-  - [ ] A logged-in user gets a personalized welcome message
-  - [ ] On every page there is an option to logout
+  - [x] A logged-in user gets a personalized welcome message
+  - [x] On every page there is an option to logout
 - B
   - [ ] Each REST endpoint MUST handle authentication (401), and possibly authorization (403) (if and endpoint is open to everyone add comment)
   - [ ] Create a test class called security-test.js where each endpoint is tested for when it returns 401 and 403

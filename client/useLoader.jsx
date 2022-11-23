@@ -22,15 +22,15 @@ export function useLoader(loadingFn) {
   const [data, setData] = useState();
 
   useEffect(() => {
-    const loadData = async() =>{
-    setLoading(true);
-    try {
-      setData(await loadingFn());
-    } catch (error) {
-      setError(error);
-    }};
-    loadData().then(r => setLoading(false));
-
+    const loadData = async () => {
+      setLoading(true);
+      try {
+        setData(await loadingFn());
+      } catch (error) {
+        setError(error);
+      }
+    };
+    loadData().then((r) => setLoading(false));
   }, []);
 
   return { loading, error, data };

@@ -1,14 +1,13 @@
 import bodyParser from "body-parser";
 import request from "supertest";
 import express from "express";
-import { MongoClient } from "mongodb"
-import dotenv from "dotenv"
-import {UserApi} from "../api/users.js";
+import { MongoClient } from "mongodb";
+import dotenv from "dotenv";
+import { UserApi } from "../api/users.js";
 
 const app = express();
-app.use(bodyParser.json())
+app.use(bodyParser.json());
 let mongoClient;
-
 
 beforeAll(async () => {
   dotenv.config();
@@ -17,21 +16,19 @@ beforeAll(async () => {
   const database = mongoClient.db("unit_tests");
   await database.collection("users").deleteMany({});
 
-  app.use("/api/general/users", UserApi(database))
+  app.use("/api/users", UserApi(database));
 });
 
-afterAll(() =>{
+afterAll(() => {
   mongoClient.close();
-})
+});
 
 describe("server test suite", () => {
-  it("server does something", async () => {
-
+  it("accessing users without token ", async () => {
     const agent = request.agent(app);
-    const response = await agent.get("/api/general/users");
 
-    expect(response.status).toEqual(200);
+    const response = await agent.get("/api/users");
 
-
+    expect(response.status).toEqual(401);
   });
 });

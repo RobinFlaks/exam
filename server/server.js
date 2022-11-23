@@ -5,12 +5,19 @@ import dotenv from "dotenv";
 import { MongoClient } from "mongodb";
 import { MenuApi } from "./api/menu.js";
 import { UserApi } from "./api/users.js";
+import cookieParser from "cookie-parser";
 
 dotenv.config();
 
 const app = express();
 
 app.use(bodyParser.json());
+app.use(
+  bodyParser.urlencoded({
+    extended: false,
+  })
+);
+app.use(cookieParser(process.env.COOKIE_SECRET));
 
 const mongodbUrl = process.env.MONGODB_URL;
 
@@ -21,7 +28,7 @@ if (mongodbUrl) {
     .connect()
     .then((conn) =>
       app.use(
-        "/api/general/users",
+        "/api/users",
         UserApi(conn.db(process.env.MONGODB_DATABASE || "Catering"))
       )
     );
@@ -30,7 +37,7 @@ if (mongodbUrl) {
     .connect()
     .then((conn) =>
       app.use(
-        "/api/general/menu",
+        "/api/menu",
         MenuApi(conn.db(process.env.MONGODB_DATABASE || "Catering"))
       )
     );
