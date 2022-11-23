@@ -1,3 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[` shows form 1`] = `"<div><h3>register:</h3><form><div><label>username: <input value=""></label></div><div><label>password: <input value=""></label></div><button>Register</button></form></div>"`;
